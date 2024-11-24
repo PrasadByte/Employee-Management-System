@@ -1,0 +1,10 @@
+/.metadata/
+# Ignore Maven target directory
+/target/
+
+# Ignore Maven wrapper files (optional, if you use Maven wrapper)
+.mvn/
+mvnw
+mvnw.cmd
+ Maven Dependencies
+ /.Maven Dependencies/
