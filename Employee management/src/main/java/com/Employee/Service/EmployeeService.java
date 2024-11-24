@@ -29,9 +29,19 @@ public class EmployeeService {
 		return employeerepo.findById(id);
 	}
 	//delete the employee vis the Id
-	public void deleteemployee(int id) {
-		employeerepo.deleteById(id);
+//	public void deleteemployee(int id) {                                        //wothout validation delete by id
+//		employeerepo.deleteById(id);
+//	}
+	
+	public boolean deleteEmployeeById(int id) { //delete with validation 
+		if(employeerepo.existsById(id)) {
+			employeerepo.deleteById(id);
+			return true;
+		}
+		return false;
 	}
+	
+	
 	//update the Employee
 	
 	public void updateEmployee(Employee emp) {
